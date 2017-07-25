@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-unsigned int *complete(char *input) {
+unsigned int *complete(char *input)
+{
     static unsigned int message[16] = {0};
     int bufferSize = 0;
     unsigned int buffer = 0;
@@ -85,7 +86,8 @@ unsigned int *complete(char *input) {
     return message;
 }
 
-void display_unsigned_long(unsigned int n) {
+void display_unsigned_long(unsigned int n)
+{
     unsigned char a = (unsigned char)n;
     unsigned char b = n >> 8;
     unsigned char c = n >> 16;
@@ -96,7 +98,8 @@ void display_unsigned_long(unsigned int n) {
     printf("%2.2x", d);
 }
 
-void display_stamp(unsigned int *stamp) {
+void display_stamp(unsigned int *stamp)
+{
     for (int i = 0; i < 4; i++) {
         display_unsigned_long(stamp[i]);
     }
