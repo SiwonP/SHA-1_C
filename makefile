@@ -1,2 +1,5 @@
+CC=gcc
+EXEC=sha1
+
 build: main.c message.c
-	gcc $^ -o sha1
+	$(CC) $^ -o $(EXEC)
