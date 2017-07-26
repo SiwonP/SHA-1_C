@@ -100,7 +100,7 @@ void display_unsigned_long(unsigned int n)
 
 void display_stamp(unsigned int *stamp)
 {
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 5; i++) {
         display_unsigned_long(stamp[i]);
     }
     printf("\n");

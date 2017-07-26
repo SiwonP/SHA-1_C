@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "message.h"
+#include "hash.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,5 +12,10 @@ int main(int argc, char *argv[])
         return 1;
     }
     message = complete(argv[1]);
+    unsigned int stamp[5];
+    hash(message, stamp);
+
+    display_stamp(stamp);
+
     return 1;
 }
