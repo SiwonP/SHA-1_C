@@ -7,13 +7,13 @@ int main(int argc, char *argv[])
 {
     unsigned int *message;
 
+    unsigned int stamp[5];
+
     if (argc < 2) {
         printf("usage : %s <string>", argv[0]);
         return 1;
     }
     message = complete(argv[1]);
-
-    unsigned int stamp[5];
 
     hash(message, stamp);
 

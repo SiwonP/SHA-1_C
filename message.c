@@ -96,6 +96,10 @@ unsigned int *complete(char *input)
     j++;
     sizeMessage = sizeMessage + 32;
 
+    for (int i = 0; i < 16; i++) {
+        printf("%d\n", message[i]);
+    }
+
     return message;
 }
 
