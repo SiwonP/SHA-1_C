@@ -12,7 +12,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     message = complete(argv[1]);
+
     unsigned int stamp[5];
+
     hash(message, stamp);
 
     display_stamp(stamp);

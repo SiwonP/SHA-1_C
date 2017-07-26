@@ -25,13 +25,22 @@ unsigned int *complete(char *input)
          * beginning and not
          * to the end
          * ie reading in Little Endian */
+
         tmp = input[i];
         tmp = tmp << (bufferSize * 8);
         bufferSize++;
         buffer = buffer | tmp;
         i++;
+
+        /*
+        bufferSize++;
+        buffer = buffer << 8;
+        buffer = buffer | input[i];
+        i++;
+        */
         
         if (bufferSize == 4) {
+            printf("%x\n", buffer);
             message[j] = buffer;
             buffer = 0;
             bufferSize = 0;
@@ -51,6 +60,10 @@ unsigned int *complete(char *input)
     tmp = one;
     tmp = tmp << (bufferSize * 8);
     buffer = buffer | tmp;
+    /*
+    buffer = buffer << 8;
+    buffer = buffer | one;
+    */
 
     message[j] = buffer;
     sizeMessage = sizeMessage + 32;
